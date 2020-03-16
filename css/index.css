@@ -86,7 +86,6 @@ audio,
 video {
     margin: 0;
     padding: 0;
-    border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
@@ -141,6 +140,7 @@ table {
 
 * {
     box-sizing: border-box;
+    /*border: 1px solid gray;*/
 }
 
 html,
@@ -171,6 +171,14 @@ header nav {
 header a {
     text-decoration: none;
     color: grey
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+    text-decoration: none;
 }
 
 .logo {
@@ -233,14 +241,19 @@ button {
 @media (max-width: 800px) {
     header nav {
         flex-direction: column-reverse;
+        justify-content: space-between;
     }
     header a {
-        flex-wrap: wrap;
+        flex-direction: row;
         justify-content: center;
     }
     .links {
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        width: 99%;
+        padding-top: 5%;
     }
     .CTASection img {
         display: none;
@@ -250,8 +263,13 @@ button {
 @media (max-width: 500px) {
     header a {
         border-bottom: 1px solid grey;
+        width: 100%;
     }
-    .contentCard1 {
+    .links {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .content {
         flex-direction: column;
     }
     .contentCard1,
