@@ -266,8 +266,10 @@ button {
         width: 100%;
     }
     .links {
+        margin: 0;
         flex-direction: column;
         flex-wrap: wrap;
+        text-align: center;
     }
     .content {
         flex-direction: column;
